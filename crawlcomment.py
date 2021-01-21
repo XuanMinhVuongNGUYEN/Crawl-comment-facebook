@@ -47,14 +47,15 @@ for idx,(img) in enumerate(images):
     #print("{}:{}".format(idx,urls[idx]))
 
 
-
+#Enregistrer des données sur ordinateur
 d = {'User':users, 'Comment': contents}
 
 df = pd.DataFrame(data=d)
 # print(df)
-df.to_csv('D:/MongoDB/Data/crawlcomment.csv',index=False)
-pd.read_csv('D:/MongoDB/Data/crawlcomment.csv')
+# df.to_csv('D:/MongoDB/Data/crawlcomment.csv',index=False)
+# pd.read_csv('D:/MongoDB/Data/crawlcomment.csv')
 
+#Enregistrer des données sur MongoDB
 client = pymongo.MongoClient('mongodb://localhost:27017/')
 mydb = client['mydatabase']
 mydoc = mydb["crawlcomment"]
