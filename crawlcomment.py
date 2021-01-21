@@ -49,7 +49,6 @@ for idx,(img) in enumerate(images):
 
 #Enregistrer des données sur ordinateur
 d = {'User':users, 'Comment': contents}
-
 df = pd.DataFrame(data=d)
 # print(df)
 # df.to_csv('D:/MongoDB/Data/crawlcomment.csv',index=False)
